@@ -279,6 +279,7 @@ p = D / L
 Where:
 
 D = number of different positions
+
 L = total number of aligned positions
 
 Example:
@@ -289,6 +290,7 @@ Example:
 | Seq2 | A B A B A A |
 
 Differences = 2
+
 Length = 6
 
 p = 2 / 6 = 0.333
@@ -310,6 +312,7 @@ d = -ln(1 - p)
 Where:
 
 p = observed p-distance
+
 d = corrected evolutionary distance
 
 This correction becomes more important when sequences are highly divergent.
@@ -329,6 +332,7 @@ dΓ = a[(1 - p)^(-1/a) - 1]
 Where:
 
 a = gamma shape parameter
+
 p = observed p-distance
 
 Small a values mean stronger rate variation among sites.
