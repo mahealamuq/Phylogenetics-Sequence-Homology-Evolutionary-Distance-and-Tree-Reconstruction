@@ -170,37 +170,42 @@ Rooted trees can suggest ancestor-descendant relationships.
 
 An unrooted tree shows relationships but does not show the direction of time.
 
+```
 A ----- B
  \     /
    C
-
+```
 Unrooted trees show similarity or relatedness, but not ancestry direction.
 
 ## 8. Types of Phylogenetic Trees
 
-Cladogram
+**Cladogram**
 
 A cladogram shows relationships, but branch lengths are not proportional to evolutionary change.
 
-Additive Tree
+**Additive Tree**
 
 An additive tree includes branch lengths that represent evolutionary distance.
 
-Ultrametric Tree
+**Ultrametric Tree**
 
 An ultrametric tree assumes a molecular clock, meaning all lineages evolve at a constant rate.
 
-Tree with Outgroup
+**Tree with Outgroup**
 
 An outgroup is a more distantly related taxon used to root the tree.
 
-9. Newick Format
+---
+
+## 9. Newick Format
 
 Newick format is a standard text format for representing phylogenetic trees.
 
 Example:
 
+```
 ((raccoon,bear),((sea_lion,seal),((monkey,cat),weasel)),dog);
+```
 
 A simple tree:
 
@@ -216,7 +221,7 @@ A tree with branch lengths:
 
 Branch lengths usually represent the number of substitutions per site.
 
-10. Bootstrap Support
+## 10. Bootstrap Support
 
 Bootstrap analysis estimates confidence in tree branches.
 
@@ -235,7 +240,7 @@ This means that the branch appeared in 85% of bootstrap trees.
 
 Low-support branches may be collapsed in a condensed tree.
 
-11. Evolutionary Distance
+## 11. Evolutionary Distance
 
 Evolutionary distance measures how different two sequences are.
 
@@ -247,7 +252,8 @@ Example:
 Seq1    0.00   0.20   0.35
 Seq2    0.20   0.00   0.30
 Seq3    0.35   0.30   0.00
-12. p-distance
+
+## 12. p-distance
 
 The simplest evolutionary distance is p-distance.
 
@@ -272,7 +278,7 @@ Limitation:
 
 p-distance does not correct for multiple mutations at the same site.
 
-13. Poisson Distance Correction
+## 13. Poisson Distance Correction
 
 Poisson correction accounts for hidden mutations that happened more than once at the same site.
 
@@ -287,7 +293,7 @@ d = corrected evolutionary distance
 
 This correction becomes more important when sequences are highly divergent.
 
-14. Gamma Distance Correction
+## 14. Gamma Distance Correction
 
 Gamma correction accounts for site-specific mutation rates.
 
@@ -304,7 +310,7 @@ p = observed p-distance
 
 Small a values mean stronger rate variation among sites.
 
-15. Molecular Clock
+## 15. Molecular Clock
 
 The molecular clock hypothesis suggests that mutations accumulate at an approximately constant rate over time.
 
@@ -318,7 +324,8 @@ Species-specific biology
 Natural selection
 Functional constraints
 Different rates at different sites
-16. Transition and Transversion
+
+## 16. Transition and Transversion
 
 DNA substitutions can be classified into transitions and transversions.
 
@@ -336,7 +343,7 @@ A or G ↔ C or T
 
 Transitions often occur more frequently than transversions.
 
-17. Codon Position and Mutation Rate
+## 17. Codon Position and Mutation Rate
 
 Different codon positions evolve at different rates.
 
@@ -347,7 +354,7 @@ Codon Position	Effect
 
 Third codon positions often evolve faster because mutations may not change the amino acid.
 
-18. Evolutionary Models
+## 18. Evolutionary Models
 
 Evolutionary models describe how sequences change over time.
 
@@ -368,7 +375,8 @@ K80	Equal	Yes	Different transition and transversion rates
 HKY85	Variable	Yes	Common DNA model
 TN93	Variable	Yes	More flexible
 GTR	Variable	Yes	General time-reversible model
-19. Jukes-Cantor Model
+
+## 19. Jukes-Cantor Model
 
 The Jukes-Cantor model assumes:
 
@@ -387,7 +395,7 @@ T    α    α    α   -3α
 
 Each row sums to zero because the total probability must remain constant.
 
-20. Protein Evolution Models
+## 20. Protein Evolution Models
 
 Protein models estimate amino acid substitution rates.
 
@@ -401,28 +409,29 @@ WAG
 
 Protein models are useful because amino acids have different biochemical properties and do not substitute equally.
 
-21. Tree Reconstruction Methods
+## 21. Tree Reconstruction Methods
 
-Common methods include:
+### Common methods include:
 
-Distance-Based Methods
+**Distance-Based Methods**
 
 These methods first calculate a distance matrix, then build a tree.
 
 Examples:
 
-UPGMA
-Neighbor-Joining
-Character-Based Methods
+- UPGMA
+- Neighbor-Joining
+- Character-Based Methods
 
 These methods use aligned characters directly.
 
 Examples:
 
-Maximum Parsimony
-Maximum Likelihood
-Bayesian inference
-22. Maximum Parsimony
+- Maximum Parsimony
+- Maximum Likelihood
+- Bayesian inference
+
+## 22. Maximum Parsimony
 
 Maximum parsimony chooses the tree that requires the fewest evolutionary changes.
 
@@ -432,7 +441,7 @@ Best tree = tree with minimum number of mutations
 
 Parsimony is simple and intuitive but can be misleading when mutation rates vary greatly.
 
-23. Small Parsimony Problem
+## 23. Small Parsimony Problem
 
 The Small Parsimony Problem asks:
 
@@ -445,7 +454,8 @@ Tree T with leaves labeled by character strings
 Output:
 
 Internal node labels that minimize the parsimony score
-24. Fitch Algorithm
+
+## 24. Fitch Algorithm
 
 The Fitch algorithm solves the unweighted Small Parsimony Problem.
 
@@ -466,7 +476,8 @@ If Su ∩ Sw is not empty:
 Otherwise:
     Sv = Su ∪ Sw
     score = score + 1
-25. Sankoff Algorithm
+    
+## 25. Sankoff Algorithm
 
 The Sankoff algorithm solves a weighted version of the Small Parsimony Problem.
 
@@ -478,11 +489,13 @@ s_t(v) = min_i [s_i(u) + δ_i,t] + min_j [s_j(w) + δ_j,t]
 
 Where:
 
-v = internal node
-u and w = children of v
-δ = substitution cost matrix
-s_t(v) = minimum score if node v has character t
-26. Large Parsimony Problem
+- v = internal node
+- u and w = children of v
+- δ = substitution cost matrix
+- s_t(v) = minimum score if node v has character t
+
+---
+## 26. Large Parsimony Problem
 
 The Large Parsimony Problem asks:
 
@@ -495,7 +508,9 @@ For many taxa, the number of possible trees becomes extremely large, so heuristi
 Example heuristic:
 
 Nearest Neighbor Interchange
-27. Basic Phylogenetic Workflow
+
+---
+## 27. Basic Phylogenetic Workflow
 
 A simple phylogenetic workflow:
 
@@ -506,3 +521,17 @@ A simple phylogenetic workflow:
 5. Build phylogenetic tree
 6. Estimate branch support using bootstrap
 7. Visualize and interpret the tree
+---  
+## 28. Key Takeaways
+    
+- Phylogenetic trees are hypotheses, not absolute truth.
+- Homologous sequences should be used for phylogenetic analysis.
+- Orthologs are best for species tree reconstruction.
+- Paralogs can mislead species tree interpretation.
+- Multiple sequence alignment is usually required before tree building.
+- p-distance is simple but does not correct for hidden mutations.
+- Poisson and Gamma corrections estimate more realistic evolutionary distances.
+- Evolutionary models improve tree reconstruction.
+- Bootstrap support helps evaluate confidence in tree branches.
+- Maximum parsimony finds the tree with the fewest changes.
+---
