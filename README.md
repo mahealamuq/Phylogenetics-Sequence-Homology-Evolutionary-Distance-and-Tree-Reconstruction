@@ -133,26 +133,30 @@ Example:
 
 Aligned columns allow us to identify:
 
-Conserved positions
-Mutated positions
-Insertions and deletions
-Sequence similarity
-Evolutionary distance
-6. Phylogenetic Tree Terminology
+- Conserved positions
+- Mutated positions
+- Insertions and deletions
+- Sequence similarity
+- Evolutionary distance
+  
+## 6. Phylogenetic Tree Terminology
 
 Important tree terms:
 
-Term	Meaning
-Root	Common ancestor of all taxa in a rooted tree
-Leaf / Tip / Terminal node	Observed sequence or species
-Internal node	Hypothetical ancestor
-Branch / Edge	Evolutionary connection between nodes
-Branch length	Amount of evolutionary change
-Clade	Group containing an ancestor and all descendants
-Bifurcating tree	Tree where each internal node has two descendants
-Multifurcating tree	Tree where a node has more than two descendants
-7. Rooted vs Unrooted Trees
-Rooted Tree
+| Term | Meaning |
+|------|---------|
+| Root | Common ancestor of all taxa in a rooted tree |
+| Leaf / Tip / Terminal node | Observed sequence or species |
+| Internal node | Hypothetical ancestor |
+| Branch / Edge | Evolutionary connection between nodes |
+| Branch length | Amount of evolutionary change |
+| Clade | Group containing an ancestor and all descendants |
+| Bifurcating tree | Tree where each internal node has two descendants |
+| Multifurcating tree | Tree where a node has more than two descendants |
+
+## 7. Rooted vs Unrooted Trees
+
+**Rooted Tree**
 
 A rooted tree shows the direction of evolutionary time.
 
@@ -162,7 +166,7 @@ A rooted tree shows the direction of evolutionary time.
 
 Rooted trees can suggest ancestor-descendant relationships.
 
-Unrooted Tree
+**Unrooted Tree**
 
 An unrooted tree shows relationships but does not show the direction of time.
 
@@ -172,7 +176,8 @@ A ----- B
 
 Unrooted trees show similarity or relatedness, but not ancestry direction.
 
-8. Types of Phylogenetic Trees
+## 8. Types of Phylogenetic Trees
+
 Cladogram
 
 A cladogram shows relationships, but branch lengths are not proportional to evolutionary change.
