@@ -126,9 +126,9 @@ Before building a tree, sequences are aligned so that homologous positions are c
 Example:
 
 |---|---|
-|Seq1 | A T G C A A|
-|Seq2 | A T G T A A|
-|Seq3 | A C G C A A|
+| Seq1 | A T G C A A|
+| Seq2 | A T G T A A|
+| Seq3 | A C G C A A|
 
 Aligned columns allow us to identify:
 
