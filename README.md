@@ -283,8 +283,10 @@ L = total number of aligned positions
 
 Example:
 
-Seq1: A A A B B A
-Seq2: A B A B A A
+| Sequence | Character States |
+|----------|------------------|
+| Seq1 | A A A B B A |
+| Seq2 | A B A B A A |
 
 Differences = 2
 Length = 6
