@@ -347,12 +347,12 @@ This can be useful for estimating divergence time.
 
 However, mutation rates can vary because of:
 
-Generation time
-Population size
-Species-specific biology
-Natural selection
-Functional constraints
-Different rates at different sites
+- Generation time
+- Population size
+- Species-specific biology
+- Natural selection
+- Functional constraints
+- Different rates at different sites
 
 ---
 
@@ -360,13 +360,15 @@ Different rates at different sites
 
 DNA substitutions can be classified into transitions and transversions.
 
-Transition
+**Transition**
 
 A transition is a substitution within the same nucleotide group:
 
 A ↔ G
+
 C ↔ T
-Transversion
+
+**Transversion**
 
 A transversion is a substitution between purine and pyrimidine groups:
 
@@ -380,10 +382,11 @@ Transitions often occur more frequently than transversions.
 
 Different codon positions evolve at different rates.
 
-Codon Position	Effect
-1st position	Often non-synonymous
-2nd position	Often non-synonymous
-3rd position	Often synonymous
+| Codon Position | Effect |
+|----------------|--------|
+| 1st position | Often non-synonymous |
+| 2nd position | Often non-synonymous |
+| 3rd position | Often synonymous |
 
 Third codon positions often evolve faster because mutations may not change the amino acid.
 
@@ -391,25 +394,28 @@ Third codon positions often evolve faster because mutations may not change the a
 
 ## 18. Evolutionary Models
 
-Evolutionary models describe how sequences change over time.
+Evolutionary models describe how sequences change over time. They help algorithms estimate the real number of changes from observed changes.
 
 They connect sequence alignment to tree reconstruction algorithms.
 
 Models may consider:
 
-Equal or unequal base frequencies
-Different transition and transversion rates
-Different codon position rates
-Site-specific rate variation
-DNA or protein substitution behaviour
-Common DNA Evolutionary Models
-Model	Base Composition	Transition/Transversion Difference	Notes
-JC69	Equal	No	Simplest model
-F81	Variable	No	Allows unequal base frequencies
-K80	Equal	Yes	Different transition and transversion rates
-HKY85	Variable	Yes	Common DNA model
-TN93	Variable	Yes	More flexible
-GTR	Variable	Yes	General time-reversible model
+- Equal or unequal base frequencies
+- Different transition and transversion rates
+- Different codon position rates
+- Site-specific rate variation
+- DNA or protein substitution behaviour
+
+**Common DNA Evolutionary Models**
+
+| Model | Base Composition | Transition/Transversion Difference | Notes |
+|---------|----------------|----------------------------------|-------|
+| JC69 | Equal | No | Simplest model |
+| F81 | Variable | No | Allows unequal base frequencies |
+| K80 | Equal | Yes | Different transition and transversion rates |
+| HKY85 | Variable | Yes | Common DNA model |
+| TN93 | Variable | Yes | More flexible |
+| GTR | Variable | Yes | General time-reversible model |
 
 ---
 
